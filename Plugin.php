@@ -1,11 +1,11 @@
 <?php
 /**
- * <a href='https://blog.irow.top/archives/396.html' title='项目主页' target='_blank'>彩色3D标签云插件</a>
+ * <a href='https://www.irow.top/archives/396.html' title='项目主页' target='_blank'>彩色3D标签云插件</a>
  *
  * @package ColorfulTags
  * @author 锋临
- * @version 1.4
- * @link https://blog.irow.top/
+ * @version 1.5
+ * @link https://www.irow.top/
  */
 class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 	/* 激活插件方法 */
@@ -17,8 +17,8 @@ class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 	}
 	/* 插件配置方法 */
 	public static function config(Typecho_Widget_Helper_Form $form) {
-		$is3d = new Typecho_Widget_Helper_Form_Element_Radio('is3d', ['0' => _t('否'), '1' => _t('是')], '0', _t('是否启用3D效果'), _t('开启后标签云会围绕3D球体滚动'));
-		$form->addInput($is3d);
+		$is_3d = new Typecho_Widget_Helper_Form_Element_Radio('is_3d', ['0' => _t('否'), '1' => _t('是')], '0', _t('是否启用3D效果'), _t('开启后标签云会围绕3D球体滚动'));
+		$form->addInput($is_3d);
 		$radius = new Typecho_Widget_Helper_Form_Element_Text(
 					'radius', NULL, '80',
 					_t('3D标签云半径：'),
@@ -31,9 +31,9 @@ class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 					_t('默认为11，如果不是很清楚请勿修改')
 				);
 		$form->addInput($speed);
-		$pjax = new Typecho_Widget_Helper_Form_Element_Radio('pjax', ['0' => _t('否'), '1' => _t('是')], '0', _t('是否启用了PJAX'), _t('如果你启用了pjax,当切换页面时候，js不会重写绑定事件到新生成的节点上。
+		$is_pjax = new Typecho_Widget_Helper_Form_Element_Radio('is_pjax', ['0' => _t('否'), '1' => _t('是')], '0', _t('是否启用了PJAX'), _t('如果你启用了pjax,当切换页面时候，js不会重写绑定事件到新生成的节点上。
 			你可以在该项设置中重新加载js函数，以便将事件正确绑定ajax生成的DOM节点上'));
-		$form->addInput($pjax);
+		$form->addInput($is_pjax);
 	}
 	/* 个人用户的配置方法 */
 	public static function personalConfig(Typecho_Widget_Helper_Form $form) {
@@ -42,15 +42,15 @@ class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 	public static function render($archive) {
 		/*获取参数*/
 		$options = Helper::options();
-		$is3d = $options->plugin('ColorfulTags')->is3d;
+		$is_3d = $options->plugin('ColorfulTags')->is_3d;
 		$radius = $options->plugin('ColorfulTags')->radius;
 		$speed = $options->plugin('ColorfulTags')->speed;
-		$pjax = $options->plugin('ColorfulTags')->pjax;
-		$ispost = $archive->parameter->type=='post';
+		$is_pjax = $options->plugin('ColorfulTags')->is_pjax;
+		$is_post = $archive->parameter->type=='post';
 		$static_src = $options->pluginUrl.'/ColorfulTags/static';
 		
-		if($pjax) {
-			if($ispost||!$is3d){
+		if($is_pjax) {
+			if($is_post||!$is_3d){
 				$html = <<<html
 							<!-- Start ColorfulTags -->
 							<link rel="stylesheet" type="text/css" href="{$static_src}/css/colorfultags.min.css">
@@ -83,7 +83,7 @@ html;
 html;
 			}
 		} else{
-			if($ispost||!$is3d){
+			if($is_post||!$is_3d){
 				$html = <<<html
 							<!-- Start ColorfulTags -->
 							<link rel="stylesheet" type="text/css" href="{$static_src}/css/colorfultags.min.css">
