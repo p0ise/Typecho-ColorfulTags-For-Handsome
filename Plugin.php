@@ -1,11 +1,11 @@
 <?php
 /**
- * <a href='https://www.irow.top/archives/396.html' title='项目主页' target='_blank'>彩色3D标签云插件</a>
+ * <a href='https://blog.irow.top/archives/396.html' title='项目主页' target='_blank'>彩色3D标签云插件</a>
  *
  * @package ColorfulTags
  * @author 锋临
  * @version 1.5
- * @link https://www.irow.top/
+ * @link https://blog.irow.top/
  */
 class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 	/* 激活插件方法 */
@@ -56,7 +56,7 @@ class ColorfulTags_Plugin implements Typecho_Plugin_Interface {
 							<link rel="stylesheet" type="text/css" href="{$static_src}/css/colorfultags.min.css">
 							<script src="{$static_src}/js/colorfultags.min.js"></script>
 							<script id="colorfultags">
-							console.info("%c彩色标签云-锋临|WWW.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
+							console.info("%c彩色标签云-锋临|BLOG.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
 							colorfultags("#tag_cloud-2 > div > a");
 							$($(document).one("pjax:clicked", function() {
 								$.pjax.reload('#colorfultags')
@@ -72,7 +72,7 @@ html;
 							<script src="{$static_src}/js/colorfultags.min.js"></script>
 							<script src="{$static_src}/js/around3d.min.js"></script>
 							<script id="#colorfultags">
-							console.info("%c彩色标签云-锋临|WWW.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
+							console.info("%c彩色标签云-锋临|BLOG.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
 							colorfultags("#tag_cloud-2 > div > a");
 							around3D("#tag_cloud-2>div",{$radius}, 200, Math.PI / 180, 1, 1, true, {$speed}, 200, 0, 10, 1);
 							$($(document).one("pjax:clicked", function() {
@@ -89,7 +89,7 @@ html;
 							<link rel="stylesheet" type="text/css" href="{$static_src}/css/colorfultags.min.css">
 							<script src="{$static_src}/js/colorfultags.min.js"></script>
 							<script>
-							console.info("%c彩色标签云-锋临|WWW.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
+							console.info("%c彩色标签云-锋临|BLOG.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
 							colorfultags("#tag_cloud-2 > div > a");
 							</script>
 							<!-- End ColorfulTags -->
@@ -102,7 +102,7 @@ html;
 							<script src="{$static_src}/js/colorfultags.min.js"></script>
 							<script src="{$static_src}/js/around3d.min.js"></script>
 							<script>
-							console.info("%c彩色标签云-锋临|WWW.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
+							console.info("%c彩色标签云-锋临|BLOG.IROW.TOP","line-height:28px;padding:4px;background:#3f51b5;color:#fff;font-size:14px;font-family:Microsoft YaHei;");
 							colorfultags("#tag_cloud-2 > div > a");
 							around3D("#tag_cloud-2>div",{$radius}, 200, Math.PI / 180, 1, 1, true, {$speed}, 200, 0, 10, 1);
 							</script>
