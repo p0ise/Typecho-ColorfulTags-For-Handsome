@@ -1,4 +1,4 @@
-# Typecho-ColorfulTags-For-Handsome
+﻿# Typecho-ColorfulTags-For-Handsome
 
 Handsome主题专用彩色3D标签云插件，一键生成好看的彩色3D标签云
 
@@ -13,7 +13,7 @@ Handsome主题专用彩色3D标签云插件，一键生成好看的彩色3D标�
 
 Github地址：<https://github.com/invelop/Typecho-ColorfulTags-For-Handsome>
 
-码云地址：<https://gitee.com/ETAS/Typecho-ColorfulTags-For-Handsome>
+码云地址：<https://gitee.com/invelop/Typecho-ColorfulTags-For-Handsome>
 
 项目主页：<https://blog.irow.top/archives/396.html>
 
